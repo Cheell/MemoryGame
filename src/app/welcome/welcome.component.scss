@@ -1,0 +1,74 @@
+@import "/src/variables.scss";
+.mainWrapper  {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 90vh;
+  min-width: 95vw;
+}
+
+.flexbox {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  flex-direction: column;
+  min-width: 30vw;
+  font-size: 2vw;
+
+  * {
+    margin: 5px;
+  }
+
+  .wlc {
+    font-weight: bold;
+    font-size: 200%;
+    color: $primeColor;
+    text-shadow: 2px 2px 0 $secondColor,
+    2px -2px 0 $secondColor,
+    -2px 2px 0 $secondColor,
+    -2px -2px 0 $secondColor,
+    2px 0px 0 $secondColor,
+    0px 2px 0 $secondColor,
+    -2px 0px 0 $secondColor,
+    0px -2px 0 $secondColor;
+    text-shadow: black;
+  }
+
+  .enterNameTitle {
+    color: $secondColor;
+  }
+
+  input {
+    font-size: inherit;
+    width: calc(90% - 3px);
+    padding: 1px;
+    border-width: 2px;
+    border-color: $secondColor;
+  }
+
+  button {
+    font-size: inherit;
+    width: 90%;
+    color: white;
+    background-color: $secondColor;
+    min-height: 2vmax;
+    &:disabled {
+      filter: grayscale(0.7);
+    }
+  }
+
+  .warning {
+    color: orangered;
+    font-weight: bold;
+    visibility: hidden;
+    &.show {
+      visibility: visible;
+    }
+  }
+
+  @media (max-width: 1400px) {
+    font-size: 3vw;
+  }
+
+}
+

@@ -1,0 +1,20 @@
+.bulb{
+  height: 7vmin;
+  width: 7vmin;
+  border-radius: 50%;
+}
+.light {
+  animation-name: lighUp;
+  animation-duration: 2s;
+}
+
+@keyframes lighUp {
+  0% {filter: brightness(1);}
+  40% {filter: brightness(3);}
+  60% {filter: brightness(3);}
+  100% {filter: brightness(1);}
+}
+
+.test {
+  background-color: red;
+}

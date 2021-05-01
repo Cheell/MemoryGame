@@ -1,0 +1,8 @@
+<div class="main" (click)="lightUp()">
+  <div *ngFor="let b of bulbs; index as i"
+    [@shine] = bulbs[i].mode
+    [ngClass]="{'bulb': true}"
+    [ngStyle]="{'background-image': b.color}"
+  >
+  </div>
+</div>

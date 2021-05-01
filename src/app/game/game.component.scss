@@ -1,0 +1,14 @@
+.main{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 95vh;
+  min-width: 95vw;
+}
+
+.board{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-basis: 70%;
+}

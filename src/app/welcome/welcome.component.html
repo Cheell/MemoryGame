@@ -1,0 +1,11 @@
+<div class="mainWrapper">
+  <div class="flexbox">
+    <div class="wlc">Welcome Player!</div>
+    <div class="enterNameTitle"> Please enter your name </div>
+    <input type="text" [(ngModel)]=playerName maxlength="10" name="inputName" #name="ngModel" placeholder="Name">
+    <button [disabled]="!playerName || playerName.length < 3" (click) = startGame()> Start Game </button>
+    <div class="warning" [ngClass]="{show: (playerName.length < 3 && name.dirty)}">
+      Name should be longer then 3 symbols!
+    </div>
+  </div>
+</div>
