@@ -1,20 +1,57 @@
-.bulb{
-  height: 7vmin;
-  width: 7vmin;
-  border-radius: 50%;
-}
-.light {
-  animation-name: lighUp;
-  animation-duration: 2s;
-}
+@import '/src/variables.scss';
+@import '/src/styles.scss';
 
-@keyframes lighUp {
-  0% {filter: brightness(1);}
-  40% {filter: brightness(3);}
-  60% {filter: brightness(3);}
-  100% {filter: brightness(1);}
-}
+.main {
+    display: flex;
+    border: 5px ridge $secondColor;
+    border-radius: 100px;
+    justify-content: center;
+    align-items: center;
 
-.test {
-  background-color: red;
+    min-height: 30vmin;
+
+  .grid {
+    padding: 10vmin;
+    display: grid;
+    gap: 10vmin;
+    grid-template-areas:
+    ". . ."
+    ". . .";
+  }
+
+  .bulb{
+    height: 24vmin;
+    width: 24vmin;
+    border-radius: 50%;
+  }
+
+  .gameOver {
+    * {
+      margin: 1vmin;
+    }
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    @include mainFont;
+    button {
+      font-size: 100%;
+    }
+  }
+
+  @media(max-width: 950px) {
+    .grid {
+      grid-template-areas:
+      ". ."
+      ". ."
+      ". .";
+    }
+  }
+
+  @media(max-width: 700px ) {
+    .grid {
+      padding: 2vmin;
+      gap: 2vmin;
+    }
+  }
 }

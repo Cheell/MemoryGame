@@ -1,0 +1,28 @@
+@import '/src/variables.scss';
+@import '/src/styles.scss';
+
+.main {
+  padding: 3vmin;
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  min-height: 80vh;
+  border: 1.5vmin groove $secondColor;
+  border-radius: 50px;
+
+  @include mainFont;
+  font-size: 150%;
+
+  .grid {
+    display: grid;
+    grid-template:
+    '. . .' / 1fr 1fr 1fr;
+    gap: 3vmin;
+  }
+
+  .title {
+    margin: 2vmin 0;
+    font-size: 140%;
+  }
+
+}

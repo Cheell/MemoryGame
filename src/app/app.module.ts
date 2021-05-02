@@ -12,7 +12,6 @@ import { PageNotFoundComponent } from './page-not-found/page-not-found.component
 import { AppRoutingModule } from './app-routing.module';
 import { ScoreComponent } from './game/playboard/score/score.component';
 import { BoardComponent } from './game/playboard/board/board.component';
-import { TestComponent } from './test/test.component';
 
 @NgModule({
   declarations: [
@@ -24,7 +23,6 @@ import { TestComponent } from './test/test.component';
     PageNotFoundComponent,
     ScoreComponent,
     BoardComponent,
-    TestComponent,
   ],
   imports: [
     BrowserModule,

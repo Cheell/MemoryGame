@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
+import { DataService } from '../service/data.service';
 
 @Component({
   selector: 'app-welcome',
@@ -8,16 +9,15 @@ import { Router } from '@angular/router';
 })
 export class WelcomeComponent implements OnInit {
 
-  constructor(private router: Router) { }
+  constructor(private router: Router, private data: DataService) { }
   playerName = '';
 
   ngOnInit(): void {
+    this.data.player.next(this.playerName);
   }
 
   startGame() {
-    console.log(this.playerName, 'playerName');
-    var a = this.router.navigate(['game']);
-    console.log(a);
-
+    this.data.player.next(this.playerName);
+    this.router.navigate(['game']);
   }
 }

@@ -1,1 +1,30 @@
-<p>score-history works!</p>
+<div class="main">
+  <div>
+    <div class="grid title">
+      <div>
+        Score
+      </div>
+      <div>
+        Player
+      </div>
+      <div>
+        Date
+      </div>
+    </div>
+
+    <div *ngFor="let s of scores">
+      <div class="grid">
+        <div>
+          {{s.score}}
+        </div>
+        <div>
+          {{s.playerName}}
+        </div>
+        <div>
+          {{s.date | date:'short'}}
+        </div>
+      </div>
+    </div>
+  </div>
+
+  </div>

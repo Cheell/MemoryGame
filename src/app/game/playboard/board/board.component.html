@@ -1,8 +1,15 @@
-<div class="main" (click)="lightUp()">
-  <div *ngFor="let b of bulbs; index as i"
+<div class="main">
+  <div class="grid" *ngIf="!isGameOver">
+    <div *ngFor="let b of bulbs; index as i"
     [@shine] = bulbs[i].mode
     [ngClass]="{'bulb': true}"
     [ngStyle]="{'background-image': b.color}"
-  >
+    (click)="guessBulb(i)"
+    ></div>
+  </div>
+  <div class="gameOver" *ngIf="isGameOver">
+    <div>Game Over!!!</div>
+    <button (click)="restart()"> Restart </button>
+    <button (click)="welcomeScreen()"> Welcome Screen </button>
   </div>
 </div>

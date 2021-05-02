@@ -1,0 +1,27 @@
+@import '/src/variables.scss';
+
+@mixin mainFont {
+    font-weight: bold;
+    font-size: 200%;
+    color: $primeColor;
+    text-shadow: 2px 2px 0 $secondColor,
+    2px -2px 0 $secondColor,
+    -2px 2px 0 $secondColor,
+    -2px -2px 0 $secondColor,
+    2px 0px 0 $secondColor,
+    0px 2px 0 $secondColor,
+    -2px 0px 0 $secondColor,
+    0px -2px 0 $secondColor;
+    text-shadow: black;
+}
+
+button {
+  font-size: inherit;
+  width: 90%;
+  color: white;
+  background-color: $secondColor;
+  min-height: 2vmax;
+  &:disabled {
+    filter: grayscale(0.7);
+  }
+}

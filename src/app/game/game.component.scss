@@ -1,14 +1,9 @@
 .main{
   display: flex;
-  align-items: center;
-  justify-content: center;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  align-items: flex-start;
   min-height: 95vh;
   min-width: 95vw;
-}
-
-.board{
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-basis: 70%;
+  margin-top: 3vmin;
 }

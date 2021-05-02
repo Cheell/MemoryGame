@@ -1,0 +1,11 @@
+@import "/src/styles.scss";
+@import "/src/variables.scss";
+
+.main {
+  padding: 2vmin;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  font-size: 3vw;
+  @include mainFont;
+}
